@@ -2,11 +2,11 @@
 
 # Intro to Python
 
-Let's start learning our second programming language!
+You've learned a lot in this class so far - languages, libraries, frameworks, etc. Today, we're going to start learning another programming language: Python! Learning Python is going to happen more quickly than learning JavaScript. That's because you already know how to program! Now, you simply need to learn a new language. As you work through this unit, keep in mind that many of the concepts are the same as what you have learned so far. The differences will come with the way we write our code and the way the parts of your application will work together.
 
 ## Prerequisites
 
-- Fundamentals of programming in JavaScript
+- JavaScript Fundamentals
 
 ## Objectives
 
@@ -16,44 +16,14 @@ By the end of this, developers should be able to:
 - Compare and contrast Python with a previous language
 - Write basic programs in Python
 
-## What is Python? (5 min / 0:05)
+## What is Python? (5 min / 0:10)
 
 Python is a high-level, general purpose programming language created by Guido
 van Rossum in 1991. It is the
-[fourth](https://stackify.com/popular-programming-languages-2018/) most used
-programming language behind Java, C, C++, and C#. Python can be used for data
+[third](https://stackify.com/popular-programming-languages-2018/) most used
+programming language behind Java and C. Python can be used for data
 science, devops, or general purpose programming. In this class, we will be using
 it as a server-side, "back-end" programming language.
-
-## The Zen of Python
-
-Tim Peters, one of the original Python users wrote the following poem on the
-philosophy behind the Python language:
-
-```
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
-
-_Fun Fact!_ There's an easter egg in the Python interpreter that prints this
-with the command `import this`.
 
 ### Getting Python
 
@@ -134,17 +104,17 @@ Notice a few other things about the above block of code:
 
 - We no longer need to precede new variables with `var`, `let`, or `const`. Just
   use the name of the variable!
-- Variables are instantiated as they are used
+- Variables are instantiated as they are used.
 - Variables are also written in `snake_case`. That means all lower case with
   words separated by underscores.
-- Variable names should still be semantic
+- Variable names should still be semantic.
 
 ### No Semicolons
 
 While your code will work if you close a line with `;`, common practice is not
 to use them.
 
-## You Do: Data Types (20 min / 0:25)
+## You Do: Data Types (20 min / 0:30)
 
 Start the IPython REPL in your terminal and start working through the prompts
 below.
@@ -155,7 +125,7 @@ below.
 This is part of the gradual release of responsibility that we have discussed and
 that you have experienced during your projects, this is the part where you
 become developers and you don't rely on others to teach you. Developers have to
-teach themselves all the time, right now you are doing that in an environment
+teach themselves all the time. Right now, you are doing that in an environment
 where you have support.
 
 While we could re-teach you what numbers, strings, conditionals, etc. are like
@@ -166,14 +136,12 @@ if we taught it to you, you'd get bored really quickly.
 Because of this, the peculiarities of Python will be apparent. These are the
 things you need to be aware of in the next few classes.
 
-I will come by and check your understanding one-on-one and ask you questions
-
 </details>
 
 <details>
 <summary>Do I have to do the exercises? Can't I just read the code?</summary>
 
-Just reading the code wont lead to learning it, so type everything out into the
+Just reading the code won't lead to learning it, so type everything out into the
 IPython REPL!
 
 </details>
@@ -185,7 +153,7 @@ Everything in Python is an **object**.
 - By "object" we mean that everything has its own set of properties and methods
 - Not a new concept. Data types in JavaScript had their own properties and
   methods (e.g., `string.length` or `function.bind()`)
-- You will learn more about this when you dive into Python OOP next week
+- You will learn more about this when you dive into Python OOP later this week
 
 ### Numbers
 
@@ -207,10 +175,10 @@ Python uses similar arithmetic operators to JavaScript
 30 / 5 # Division
 # => 6.0
 
-31 // 5 # Note: integer division
+31 // 5 # Note: Integer Division
 # => 6
 
-30 % 5 # Modulo (remainder)
+30 % 5 # Modulo (Remainder)
 # => 0
 
 31 % 5
@@ -306,7 +274,7 @@ occupation = "consultant"
 ```
 
 F strings are also a brand new way of doing string interpolation in Python - you
-won't see them as often because they're in python 3.6 and newer, but they are
+won't see them as often because they're in Python 3.6 and newer, but they are
 super helpful. Check your version with `python3 --version` before trying this or
 it may not work!
 
@@ -323,7 +291,7 @@ This is similar to Javascript template string syntax!
 
 They are `True` and `False` (note the capitals!)
 
-- We'll be using them in conditionals and comparisons just like in JavaScript
+We'll be using them in conditionals and comparisons just like in JavaScript
 
 Comparison operators in Python are nearly identical to JavaScript. However, the
 check for equality is always for both value and data type (i.e. strict
@@ -349,10 +317,10 @@ Logical operators are also similar.
 
 ### None
 
-Python's "nothing".
+`None` is Python's "nothing".
 
 - The equivalent of JavaScript's `null`
-- it is falsey
+- It is falsey
 - Always written with a capital letter: `None`
 
 ### Conditionals
@@ -396,7 +364,7 @@ using `input`:
 
 ![input](assets/user_input.png)
 
-## We Do: Python Bouncer (20 min / 0:45)
+## I Do: Python Bouncer (15 min / 0:45)
 
 Back during our first few lessons on JavaScript, you used conditionals and
 variables to create a Bouncer.
@@ -413,276 +381,7 @@ Here's the recap of the bouncer rules:
 > Bonus: if age is 18 or older, but under 21, output that the person can enter
 > the bar but cannot drink!
 
-## You Do: Data Types Exercises (15 min / 1:00)
-
-Clone down the following lesson:
-
-https://git.generalassemb.ly/ga-dc-wdi-python/python-basics-exercises
-
-Open exercise 1, `data-types.md`. Read the prompts and try to figure out the
-answer. Write your guess in the answer area below each question. Then run the
-code to see if you got it right!
-
-## Break (10 min / 1:10)
-
-## Lists & Collections(15 min / 1:30)
-
-An ordered collection of related values. Same syntax as JavaScript arrays. The
-data type is called a **list**.
-
-- Square brackets
-- Values separated by commas
-- Zero-indexed
-
-```python
-numbers = [1, 2, 3]
-# => [1, 2, 3]
-
-animals = ["dog", "cat", "horse"]
-# => ["dog", "cat", "horse"]
-
-animals[0]
-# => "dog"
-
-animals[1] = "elephant"
-# => "elephant"
-
-animals
-# => ["dog", "elephant", "horse"]
-```
-
-### List Methods
-
-Python provides us with an extensive library of list methods we can use to
-traverse and manipulate lists.
-
-- The Python
-  [documentation](https://docs.python.org/3.6/tutorial/datastructures.html) for
-  `List` is a great resource for learning more about these methods
-- Can't go over them all, but chances are if you could do it in JavaScript then
-  you can do it in Python.
-
-> **IMPORTANT:** You DO NOT need to memorize these. The following is just a
-> sample of array methods available to you. You'll come to be more familiar with
-> these as you need them and look them up in documentation.
->
-> **tl;dr:** The more you Google them, the better you'll remember them.
-
-#### `.append()`, `.extend()`, and `.pop()`
-
-- Append inserts an item into the end of the list.
-- Extend adds two arrays together.
-- Pop removes an item from the end of the list. You can also supply an index to
-  `pop` to remove at that index.
-
-You can think of them in comparison to these equivalent javascript methods:
-
-| Python | Javascript |
-| ------ | ---------- |
-| append | push       |
-| extend | concat     |
-| pop    | pop        |
-
-```py
-numbers = [1, 2, 3, 4, 5]
-# => [1, 2, 3, 4, 5]
-
-numbers.append(6)
-# => [1, 2, 3, 4, 5, 6]
-
-numbers.append([1, 2, 3])
-# => [1, 2, 3, 4, 5, 6, [1, 2, 3]]
-
-numbers.extend([7, 8, 9])
-# => [1, 2, 3, 4, 5, 6, [1, 2, 3], 7, 8, 9]
-
-numbers.pop()
-# => 9
-
-numbers
-# => [1, 2, 3, 4, 5, 6, [1, 2, 3], 7, 8]
-
-numbers.pop(0)
-# => [2, 3, 4, 5, 6, [1, 2, 3], 7, 8]
-```
-
-Python also has a few methods that JS doesn't have:
-
-### `list.insert(index, value)`
-
-```
-Insert an item at a given position. The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).
-```
-
-```py
-numbers = [3, 1, 5, 2, 4]
-
-numbers.insert(2, 11)
-
-# => [3, 1, 11, 5, 2, 4]
-```
-
-### `sorted()`
-
-Organizes list values from lowest to highest. Numbers and strings.
-
-```py
-numbers = [3, 1, 5, 2, 4]
-# => [3, 1, 5, 2, 4]
-
-sorted(numbers)
-# => [1, 2, 3, 4, 5]
-```
-
-### `.remove()`
-
-- Removes an argument from a list
-- If there are multiple instances of that argument, it will delete just the
-  first.
-
-```py
-numbers = [3, 1, 2, 2, 4]
-# => [3, 1, 2, 2, 4]
-
-numbers.remove(2)
-# => 2
-
-numbers
-# => [3, 1, 2, 4]
-```
-
-## Dictionary
-
-A Python dictionary is an unordered collection organized by key-value pairs. A
-dictionary is very similar to a JavaScript object.
-
-```py
-sei_class= {
-  "teacher": "Jimmy",
-  "students": ["Yacko", "Wacko", "Dot"],
-  "classroom": 2,
-  "in_session": True,
-  "schedule": {
-    "morning": "Python Basics",
-    "afternoon": "Enumerables"
-  }
-}
-```
-
-Accessing dictionary values:
-
-```py
-sei_class["teacher"]
-# => "John"
-```
-
-Note that you can't do this, like you can in javascript!
-
-```py
-sei_class.teacher
-
-# => AttributeError: 'dict' object has no attribute 'teacher'
-```
-
-Modifying dictionary values:
-
-```py
-sei_class["teacher"] = "Jimbo"
-# => "Jimbo"
-```
-
-Nested values:
-
-```py
-sei_class["schedule"]["morning"]
-```
-
-### Dictionary Methods
-
-Like lists, Python also provides us with a library of dictionary methods.
-
-- [Again, the Python documentation is a great resource](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
-
-> As mentioned with lists, do not worry about memorizing these methods. Just
-> know how to look them up should the need arise.
-
-#### Keys
-
-Returns a `dict_keys` structure with all the keys in the dictionary. Can easily
-be translated to a list using `list()`.
-
-```py
-sei_class.keys()
-# => dict_keys(['teacher', 'students', 'classroom', 'in_session', 'schedule'])
-
-list(sei_class.keys())
-# => ['teacher', 'students', 'classroom', 'in_session', 'schedule']
-```
-
-Note that `dict_keys` is not a list. It's a specific data type, so it doesn't
-have all the same methods that lists have.
-
-## Ranges
-
-Use ranges to quickly generate lists of numbers.
-
-- Parentheses
-- Min and max value - 1 inside `range`. Range is not inclusive, meaning that it
-  includes numbers up until the second parameter but not the second parameter
-  itself, similiar to using a `<` in for loops.
-- Generate list using `list()` function
-
-```py
-list(range(1, 6))
-# => [1, 2, 3, 4, 5]
-```
-
-You can also use ranges in for loops!
-
-```py
-for i in range(1, 6):
-  print(i)
-
-# => 1
-# => 2
-# => 3
-# => 4
-# => 5
-```
-
-### length
-
-Python uses a special function called `len()` to get the length of different
-data structures.
-
-You can use `len()` on any iterable type, which includes lists and dictionaries.
-
-```py
-sei_class = {
-  "teacher": "John",
-  "students": ["Yacko", "Wacko", "Dot"],
-  "classroom": 2,
-  "in_session": True,
-  "schedule": {
-    "morning": "Python Basics",
-    "afternoon": "Enumerables"
-  }
-}
-
-len(sei_class)
-# => 5
-```
-
-> Note that there is no array.length property!
-
-## You Do: Data Collections Exercises
-
-> 15 minutes exercise. 5 minutes review.
-
-Complete the second set of exercises (Exercise II: Data Collections) in
-[this repo](https://git.generalassemb.ly/ga-dc-wdi-python/python-basics-exercises).
-
-## Functions
+## Functions (5 min / 0:50)
 
 In Python, functions are defined like this:
 
@@ -717,19 +416,12 @@ double()
 # => 10
 ```
 
-## You do: Exercise: Temperature Converter
-
-> 15 minutes exercise. 10 minutes review.
-
-[Temperature Converter (Python)](https://git.generalassemb.ly/ga-dc-wdi-python/temperature-converter-python)
-
-## Compare and Contrast
+## Compare and Contrast (5 min / 0:55)
 
 <img src="https://media.giphy.com/media/l4FGw4d101Sa0pGTe/giphy.gif" margin-left="24%"/>
 
-Break out in to groups of 3, then, with your group, compare and contrast again
-what you know about JavaScript with what you now know about Python on the
-whiteboard. You can do this with a table, a mind map or however you think is
+Turn to the person sitting next to you and compare and contrast 
+what you know about JavaScript with what you now know about Python. You can do this with a table, a mind map or however you think is
 best.
 
 Some things to think about:
@@ -746,7 +438,7 @@ challenging to learn programming and a programming language at the same time
 and a programming language (JavaScript), you only need to learn the new
 programming language!
 
-The better you learn a language, the more comfortable you get with it. The more
+The more you use a language, the more comfortable you get with it. The more
 comfortable you get with it, the easier it is to "think" in that language.
 
 ## Additional Resources
@@ -754,21 +446,6 @@ comfortable you get with it, the easier it is to "think" in that language.
 - [Python Docs](https://docs.python.org/3/)
 - [Python Starter](https://git.generalassemb.ly/dc-wdi-python-django/python-starter)
 - [Python Beginner Tutorial (Docs)](https://docs.python.org/3/tutorial/index.html)
-
-## Bonus
-
-### [Pyenv](https://github.com/pyenv/pyenv)
-
-Something we'll have to worry about in Python that we didn't have to worry about
-in Node is managing multiple versions of the programming language on your
-laptop. That's why we used the `pip3` and `python3` commands throughout this
-lesson, we want to use the latest version of Python.
-
-This can become tedious and annoying, so developers have build tools to manage
-which version of Python is "active" on their computer at a given time, one of
-which is [Pyenv](https://github.com/pyenv/pyenv). It's easy to set up and will
-let you manage the multiple versions of Python you already have installed on
-your laptop.
 
 ## [License](LICENSE)
 
