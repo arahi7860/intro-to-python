@@ -4,10 +4,6 @@
 
 You've learned a lot in this class so far - languages, libraries, frameworks, etc. Today, we're going to start learning another programming language: Python! Learning Python is going to happen more quickly than learning JavaScript. That's because you already know how to program! Now, you simply need to learn a new language. As you work through this unit, keep in mind that many of the concepts are the same as what you have learned so far. The differences will come with the way we write our code and the way the parts of your application will work together.
 
-## Prerequisites
-
-- JavaScript Fundamentals
-
 ## Objectives
 
 By the end of this, developers should be able to:
@@ -16,7 +12,7 @@ By the end of this, developers should be able to:
 - Compare and contrast Python with a previous language
 - Write basic programs in Python
 
-## What is Python? (5 min / 0:10)
+## What is Python?
 
 Python is a high-level, general purpose programming language created by Guido
 van Rossum in 1991. It is the
@@ -39,16 +35,9 @@ If it is _not_ installed, go ahead and install it:
 $ brew install python3
 ```
 
-Note that `python` and `python3` are different commands, and run different
-versions of python. `python` runs python 2, which we're not using for this
-course.
+Note that `python` and `python3` are different commands that run different versions of Python. 
+The `python` command runs Python 2, which we're not using for this course.
 
-Run this command to see if the default `python` is correctly configured to
-`python3`, which is part of the core Installfest process.
-
-```sh
-$ python --version
-```
 
 ### Interacting with Python
 
@@ -59,28 +48,29 @@ There are a few ways that we can interact with Python:
 The first way that we can interact with Python is by running a Python file.
 Python files have the extension `.py` and can be run through the command line:
 
-```sh
-cd sandbox/
+```bash
+cd code/
 mkdir py-test
 cd py-test
 touch app.py     # Create a Python file
 python3 app.py   # Run that Python file
 ```
 
-> NOTE: Running an empty Python file will not result in anything, so don't worry
-> if nothing happens when you run `python3 app.py` above.
+> NOTE: Running an empty Python file will not result in anything so don't worry
+> if nothing happens if you run `python3 app.py` above.
 
 #### By REPL (Read-Evaluate-Print-Loop)
 
 The second way that we can interact with Python code is with a tools like
 IPython or the Python shell. These are both REPLs. Have we used these before?
 
-```sh
-pip3 install ipython # install IPython
+```bash
+python3                # start Python3 REPL
+exit()                 # quit Python REPL
+
+pip3 install ipython  # install IPython with Pip
 ipython               # start IPython REPL
 exit                  # quit IPython
-python3                # start Python3 REPL
-exit()                # quit Python REPL
 ```
 
 > IPython is an alternative Python shell that adds a bunch of features like tab
@@ -102,22 +92,20 @@ my_favorite_animal = "flying squirrel"
 
 Notice a few other things about the above block of code:
 
-- We no longer need to precede new variables with `var`, `let`, or `const`. Just
-  use the name of the variable!
+- We no longer need to precede new variables with `var`, `let`, or `const`. 
+  Just use the name of the variable!
 - Variables are instantiated as they are used.
-- Variables are also written in `snake_case`. That means all lower case with
-  words separated by underscores.
+- Variables are also written in `snake_case`. 
+- That means all lower case with words separated by underscores.
 - Variable names should still be semantic.
 
 ### No Semicolons
 
-While your code will work if you close a line with `;`, common practice is not
-to use them.
+While your code will work if you close a line with `;`, common practice is not to use them.
 
 ## You Do: Data Types (20 min / 0:30)
 
-Start the IPython REPL in your terminal and start working through the prompts
-below.
+Start the IPython REPL in your terminal and start working through the prompts below.
 
 <details>
 <summary>Why do we have to read all this ourselves?</summary>
@@ -240,36 +228,34 @@ This works fine. Things aren't so simple when that variable is of a different
 data type. Like a number:
 
 ```py
-class_number = 32
+age = 32
 # => 32
 
-print("I am teaching SEI " + class_number)
+print("My age is " + name)
 # TypeError: must be str, not int
 ```
 
-This is something JavaScript would just handle for you, but Python is more
-strict. In this case, you either need to convert the variable to a string using
-`str()` or use the `.format()` method. The best way of doing string
-interpolation in Python is using `.format()`.
-
-`.format()` is a string method that takes the strings to be concatenated as its
-parameters. If the string contains `{}`s, the parameters fill the `{}`s in the
-order passed in. If they contain a number (beginning with 0), they will be
-mapped to the parameter passed to `.format()` at said index.
+This is something JavaScript would just handle for you, but Python is more strict. 
+In this case, you either need to convert the variable to a string. 
+There are three common ways:
+  - The `str` function: `"My age is " + str(age)`
+  - The `format` method: `"My age is {}".format(age)`
+  - Using "f-strings": `f"My age is {age}"`
+  
+The best way of doing string interpolation in Python today is using f-strings.
 
 > Is there a similar way to format strings in JavaScript?
 
 ```python
 class_number = 22
 
-"I am teaching WDI {}.".format(class_number)
-# => "I am teaching WDI 22."
+f"I have taught SEI {class_number} times."
 
 person1 = "Lauren"
 person2 = "Frank"
 occupation = "consultant"
 
-"{0} is a {1}. {2} is a {1} as well.".format(person1, occupation, person2)
+f"{person1} is a {occupation}. {person2} is a {occupation} as well."
 # => "Lauren is a consultant. Frank is a consultant as well."
 ```
 
