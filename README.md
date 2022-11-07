@@ -15,11 +15,11 @@ By the end of this, developers should be able to:
 ## What is Python?
 
 Python is a high-level, general purpose programming language created by Guido
-van Rossum in 1991. It is the
-[third](https://stackify.com/popular-programming-languages-2018/) most used
-programming language behind Java and C. Python can be used for data
-science, devops, or general purpose programming. In this class, we will be using
-it as a server-side, "back-end" programming language.
+van Rossum in 1991. Depending on who you ask, it's the [most
+used](https://www.stackscale.com/blog/most-popular-programming-languages/) most
+used programming language up there with JavaScript, Java, and C. Python can be
+used for data science, devops, or general purpose programming. In this class, we
+will be using it as a server-side, "back-end" programming language.
 
 ### Getting Python
 
@@ -68,14 +68,18 @@ IPython or the Python shell. These are both REPLs. Have we used these before?
 python3                # start Python3 REPL
 exit()                 # quit Python REPL
 
-pip3 install ipython  # install IPython with Pip
+pip3 install ipython  # install IPython with Pip (you may need a sudo on linux)
 ipython               # start IPython REPL
 exit                  # quit IPython
 ```
 
-> IPython is an alternative Python shell that adds a bunch of features like tab
-> completion, better syntax highlighting, and the ability to inline embed
-> graphics.
+- Pip3 is a package manager for Python3 just like NPM is a package manager for
+node. If it's not installed, you can install it with `brew install pip3` on MacOS and `sudo apt install python3-pip` on Linux.
+
+
+- IPython is an alternative Python shell that adds a bunch of features like tab
+completion, better syntax highlighting, and the ability to inline embed
+graphics.
 
 We'll use IPython for the first portion of this lesson.
 
@@ -259,10 +263,10 @@ f"{person1} is a {occupation}. {person2} is a {occupation} as well."
 # => "Lauren is a consultant. Frank is a consultant as well."
 ```
 
-F strings are also a brand new way of doing string interpolation in Python - you
-won't see them as often because they're in Python 3.6 and newer, but they are
-super helpful. Check your version with `python3 --version` before trying this or
-it may not work!
+F strings (or "formatted string literals") are also a newer way of doing string
+interpolation in Python. They've been around since Python 3.6 so you won't see
+them in older code, but they are super helpful. Check your version with `python3
+--version` before trying this or it may not work!
 
 ```py
 class_number = 29
@@ -406,9 +410,9 @@ double()
 
 <img src="https://media.giphy.com/media/l4FGw4d101Sa0pGTe/giphy.gif" margin-left="24%"/>
 
-Turn to the person sitting next to you and compare and contrast 
-what you know about JavaScript with what you now know about Python. You can do this with a table, a mind map or however you think is
-best.
+Turn to the person sitting next to you and compare and contrast what you know
+about JavaScript with what you now know about Python. You can do this with a
+table, a mind map or however you think is best.
 
 Some things to think about:
 
@@ -430,7 +434,7 @@ comfortable you get with it, the easier it is to "think" in that language.
 ## Additional Resources
 
 - [Python Docs](https://docs.python.org/3/)
-- [Python Starter](https://git.generalassemb.ly/dc-wdi-python-django/python-starter)
+- [Python Starter](https://git.generalassemb.ly/sei-buffleheads/python-starter)
 - [Python Beginner Tutorial (Docs)](https://docs.python.org/3/tutorial/index.html)
 
 ## [License](LICENSE)
